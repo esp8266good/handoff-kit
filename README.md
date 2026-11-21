@@ -37,13 +37,10 @@ bash ~/handoff-kit/install.sh
 | 功能 | CLI | VS Code extension |
 |---|---|---|
 | hook（收尾提醒） | ✅ | ✅ 官方文件寫 `~/.claude/settings.json`（含 hooks）由 extension 和 CLI 共用 |
-| `/handoff` 指令和 skill | ✅ | ⚠ 文件沒寫清楚 extension 是否載入 `~/.claude/commands`、`~/.claude/skills` 裡的自訂項目，請照下面驗證 |
+| `/handoff` 指令和 skill | ✅ | ✅ 實測：在 Claude 面板輸入 `/`，清單裡有 `handoff` |
 | 接手 | `claude '照 @"<路徑>/handoff_prompt.txt" 接手'` | 開新對話，輸入 `照 @"<路徑>/handoff_prompt.txt" 接手` |
 
-**在 VS Code 驗證一次（1 分鐘）**：在 Claude 面板輸入 `/`，看清單裡有沒有 `handoff`。
-
-- 有：照常用。
-- 沒有：改打「用 handing-off-long-running-work skill 收尾」，效果一樣；或在 VS Code 的終端機裡跑 `claude`，CLI 一定有。
+清單裡沒看到 `handoff` 的話，先確認裝完有重新開 Claude 分頁。還是沒有的話，改打「用 handing-off-long-running-work skill 收尾」，效果一樣。
 
 ## 用法
 
